@@ -1,0 +1,7 @@
+typings/**
+.vscode/**
+.vscode-test/**
+tsconfig.json
+.gitignore
+node_modules/fs-extra
+vsc-extension-quickstart.md
