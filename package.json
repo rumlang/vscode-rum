@@ -1,0 +1,65 @@
+{
+  "name": "rum",
+  "version": "0.1.11",
+  "publisher": "avelino",
+  "description": "Rum language syntax highlight",
+  "author": {
+    "name": "Avelino"
+  },
+  "icon": "images/rumlang.png",
+  "categories": [
+    "Languages"
+  ],
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rumlang/vscode-rum"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "3.7.4",
+    "vscode": "1.1.36"
+  },
+  "engines": {
+    "vscode": "^0.10.10"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "rum",
+        "aliases": [
+          "rum",
+          "Rum",
+          "rumlang",
+          "RumLang"
+        ],
+        "extensions": [
+          ".rum"
+        ],
+        "configuration": "./rum.configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "rum",
+        "scopeName": "source.rum",
+        "path": "./syntaxes/Rum.tmLanguage"
+      },
+      {
+        "scopeName": "markdown.rum.codeblock",
+        "path": "./syntaxes/codeblock.json",
+        "injectTo": [
+          "text.html.markdown"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.superjs": "rum"
+        }
+      }
+    ]
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/rumlang/vscode-rum/issues"
+  }
+}
